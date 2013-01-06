@@ -11,7 +11,13 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Helpers for processing content through a chain of filters}
   gem.homepage      = "https://github.com/jch/html-pipeline"
 
-  gem.files         = `git ls-files`.split $/
+  gem.files         = Dir.glob("lib/**/*.rb") + [
+    "README.md",
+    "Rakefile",
+    "Gemfile",
+    "CHANGELOG.md",
+    "html-pipeline.gemspec"
+    ]
   gem.test_files    = gem.files.grep(%r{^test})
   gem.require_paths = ["lib"]
 
